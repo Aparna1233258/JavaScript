@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CW1</title>
+</head>
+<body>
+
+<p id="h"></p>
+<p id="cost"></p>
+
+<script>
+
+    var tshirts_sold = 5;
+    var caps_sold = 3;
+
+    var tshirt_price = 400;
+    var caps_price = 150;
+
+    var total_earnings = (tshirts_sold * tshirt_price) + (caps_sold * caps_price);
+
+    document.getElementById("h").innerHTML = "Total earnings: " + total_earnings;
+
+    tshirt_price = 450;
+
+    total_earnings = (tshirts_sold * tshirt_price) + (caps_sold * caps_price);
+
+    document.getElementById("cost").innerHTML += "Updated total earnings: " + total_earnings;
+
+</script>
+
+</body>
+</html>

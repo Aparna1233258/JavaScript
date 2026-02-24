@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HW1</title>
+</head>
+<body>
+
+    <p id ="bill"></p>
+
+    <script>
+        var item_rice = "Rice";
+        var item_sugar = "Sugar";
+        var item_wheat = "Wheat";
+
+        var price_rice = 100;
+        var price_sugar = 35;
+        var price_wheat = 50;
+
+        var qty_rice = 5;
+        var qty_sugar = 2;
+        var qty_wheat = 3;
+
+        var cost_rice = price_rice * qty_rice;
+        var cost_sugar = price_sugar * qty_sugar;
+        var cost_wheat = price_wheat * qty_wheat;
+
+
+        console.log(item_rice +"cost:"+cost_rice);
+        console.log(item_sugar +"cost:"+cost_sugar);
+        console.log(item_wheat +"cost:"+cost_wheat);
+       
+        qty_sugar = 5;
+
+
+        var updated_total = cost_rice + cost_sugar + cost_wheat;
+        console.log("Updated total bill:" + updated_total);
+
+    </script>
+
+</body>
+</html>
