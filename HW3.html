@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HW3</title>
+</head>
+<body>
+
+    <p id="Output"></p>
+
+    <script>
+
+        var userProfile = {
+                username: " CoolUser99 ",
+                    bio: " I LOVE coding! JavaScript is Great!!! "
+                };
+                function cleanUserBio(profile) {
+                    var cleanedUsername = profile.username.trim().toLowerCase();
+                    var cleanedBio = profile.bio.trim();
+                    var cleanedBio = cleanedBio.toLowerCase();
+                    var cleanedBio = cleanedBio.replaceAll("javascript", "JS");
+                    var bioLength = cleanedBio.length;
+
+                      return {
+                        username: cleanedUsername,
+                        bio: cleanedBio,
+                        length: bioLength
+                     };
+                }
+                var output = cleanUserBio(userProfile);
+                console.log(output);
+
+       
+    </script>
+    
+</body>
+</html>
