@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CW4</title>
+</head>
+<body>
+
+<p id="random"></p>
+<p id="score"></p>
+<p id="difference"></p>
+<p id="sqrt"></p>
+<p id="pi"></p>
+<p id="implicit"></p>
+
+<script>
+
+    var random_number = Math.floor(Math.random() * 100) + 1;
+    var user_score_string = "75";
+    var user_score = Number(user_score_string);
+    var difference = random_number - user_score;
+    var rounded_sqrt = Math.round(Math.sqrt(user_score));
+    var pi_value = Math.PI;
+    var implicit_result = "50" * 2;
+    document.getElementById("random").innerHTML ="Random number: " + random_number;
+    document.getElementById("score").innerHTML ="User score: " + user_score;
+    document.getElementById("difference").innerHTML ="Difference: " + difference;
+    document.getElementById("sqrt").innerHTML ="Rounded square root: " + rounded_sqrt;
+    document.getElementById("pi").innerHTML ="Pi value: " + pi_value;
+    document.getElementById("implicit").innerHTML ='"50" × 2 = ' + implicit_result;
+
+</script>
+
+</body>
+</html>
