@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CW5</title>
+</head>
+<body>
+<p id="result"></p>
+<button onclick="checkReturn()">Check Return Eligibility</button>
+
+<script>
+function checkReturn() {
+
+  let order = {
+    itemName: "Wireless Mouse",
+    isDelivered: true,
+    daysSinceDelivery: 5
+  };
+
+  let message =
+    (order.isDelivered && order.daysSinceDelivery <= 7 && "Eligible for Return")
+    || "Return Period Expired";
+
+  let exists = "itemName" in order;
+
+  delete order.daysSinceDelivery;
+
+  document.getElementById("result").innerHTML =
+    message + "<br>" +
+    "itemName exists: " + exists + "<br>" +
+    "Updated order → Item: " + order.itemName +
+    ", Delivered: " + order.isDelivered;
+}
+</script>
+</body>
+</html>
