@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HW4</title>
+</head>
+<body>
+
+<p id="level"></p>
+<p id="score"></p>
+<p id="difference"></p>
+<p id="sqrt"></p>
+<p id="pi"></p>
+<p id="implicit"></p>
+<p id="max"></p>
+<p id="min"></p>
+
+<script>
+
+    var mystery_level = Math.floor(Math.random() * 50) + 1;
+    var user_score_string = "45";
+    var user_score = Number(user_score_string);
+    var difference = Math.abs(mystery_level - user_score);
+    var sqrt_score = Math.sqrt(user_score);
+    var pi_value = Math.PI;
+    var implicit_result = "20" * 5;
+    var highest = Math.max(10, 20, mystery_level);
+    var lowest = Math.min(10, 20, mystery_level);
+    document.getElementById("level").innerHTML ="Mystery level: " + mystery_level;
+    document.getElementById("score").innerHTML ="User score: " + user_score;
+    document.getElementById("difference").innerHTML ="Absolute difference: " + difference;
+    document.getElementById("sqrt").innerHTML ="Square root of score: " + sqrt_score;
+    document.getElementById("pi").innerHTML ="Value of Pi: " + pi_value;
+    document.getElementById("implicit").innerHTML ='"20" × 5 = ' + implicit_result;
+    document.getElementById("max").innerHTML ="Highest value (10, 20, mystery level): " + highest;
+    document.getElementById("min").innerHTML ="Lowest value (10, 20, mystery level): " + lowest;
+
+</script>
+
+</body>
+</html>
