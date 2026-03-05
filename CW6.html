@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile Access</title>
+</head>
+<body>
+<h2>All Products</h2>
+<p id="allProducts"></p>
+<h2>Products with Price Greater Than 50</h2>
+<p id="filteredProducts"></p>
+<h2>Updated Product List</h2>
+<p id="updatedProducts"></p>
+
+<script>
+
+let productNames = ["Apple", "Banana", "Mango", "Orange"];
+let productPrices = [50, 30, 70, 60];
+
+var mergedProducts = [];
+
+for (var i = 0; i < productNames.length; i++) {
+    mergedProducts.push("Product: " + productNames[i] + " - Price: " + productPrices[i]);
+}
+
+var text = "";
+for (var i = 0; i < mergedProducts.length; i++) {
+    text += mergedProducts[i] + "<br>";
+}
+document.getElementById("allProducts").innerHTML = text;
+
+var filtered = productPrices.filter(function(value, index) {
+    return value > 50;
+});
+
+var filteredText = "";
+
+for (var i = 0; i < productPrices.length; i++) {
+    if (productPrices[i] > 50) {
+        filteredText += "Product: " + productNames[i] + " - Price: " + productPrices[i] + "<br>";
+    }
+}
+
+document.getElementById("filteredProducts").innerHTML = filteredText;
+productNames.push("Watermelon");
+productPrices.push(80);
+
+var updatedText = "";
+
+for (var i = 0; i < productNames.length; i++) {
+    updatedText += "Product: " + productNames[i] + 
+                   " - Price: " + productPrices[i] + "<br>";
+}
+
+document.getElementById("updatedProducts").innerHTML = updatedText;
+
+</script>
+</head>
+</body>
+</html>
