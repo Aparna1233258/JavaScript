@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile Access</title>
+</head>
+<body>
+
+    <h2>All Student Names</h2>
+    <p id="allNames"></p>
+
+    <h2>Students Scoring More Than 60</h2>
+    <p id="above60"></p>
+
+    <h2>Total Score of All Students</h2>
+    <p id="totalScore"></p>
+
+    <h2>Did All Students Pass? (Score > 35)</h2>
+    <p id="allPassed"></p>
+
+    <h2>Did Any Student Score More Than 90?</h2>
+    <p id="above90"></p>
+                                                          
+    <h2>Students Sorted by Score (Descending)</h2>
+    <p id="sortedStudents"></p>
+
+    <script>
+
+        let students = [
+            { name: "Rahul", score: 75 },
+            { name: "Anita", score: 82 },
+            { name: "Vikram", score: 34 },
+            { name: "Sneha", score: 95 },
+            { name: "Arjun", score: 60 }
+        ];
+
+        let allNames = students.map(student => student.name);
+        document.getElementById("allNames").innerHTML = allNames.join("<br>");
+
+        let above60 = students
+            .filter(student => student.score > 60)
+            .map(student => student.name);
+
+        document.getElementById("above60").innerHTML = above60.join("<br>");
+
+        let total = students.reduce((sum, student) => sum + student.score, 0);
+        document.getElementById("totalScore").innerHTML = total;
+
+        let allPassed = students.every(student => student.score > 35);
+        document.getElementById("allPassed").innerHTML = allPassed;
+
+        let above90 = students.some(student => student.score > 90);
+        document.getElementById("above90").innerHTML = above90;
+
+        let sorted = [...students].sort((a, b) => b.score - a.score);
+
+        let sortedOutput = "";
+        sorted.forEach(student => {
+            sortedOutput += student.name + " - " + student.score + "<br>";
+        });
+
+        document.getElementById("sortedStudents").innerHTML = sortedOutput;
+
+    </script>
+
+</body>
+</html>
