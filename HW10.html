@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html>
+<head>
+    <title>Feedback Checker</title>
+</head>
+<body>
+
+<h3>Feedback Result:</h3>
+<p id="result"></p>
+
+<script>
+    var jsonString = '{"name":"Aparna","feedback":"Thank you for your support!"}';
+
+    try {
+        var data = JSON.parse(jsonString);
+
+        var checkFeedback = (text) => {
+            if (text.toLowerCase().includes("thank")) {
+                document.getElementById("result").innerText = "Positive feedback received";
+            } else {
+                document.getElementById("result").innerText = "Feedback noted";
+            }
+        };
+
+        checkFeedback(data.feedback);
+
+    } catch (error) {
+        document.getElementById("result").innerText = "Invalid JSON format";
+    }
+</script>
+
+</body>
+</html>
+</body>
+</html>
