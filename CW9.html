@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html>
+<head>
+    <title>Comment Checker</title>
+</head>
+<body>
+
+<h3>Comment Checker</h3>
+
+<textarea id="comment" rows="4" cols="50">
+My son is 12 years old. Our flat number is 45 and contact is 9876543210.
+</textarea>
+<br><br>
+
+<button onclick="checkComment()">Check Comment</button>
+
+<p id="found"></p>
+<p id="updated"></p>
+
+<script>
+function checkComment() {
+    let comment = document.getElementById("comment").value;
+
+    let regex = /\d+/g;
+
+    let numberFound = regex.test(comment);
+
+    let updatedComment = comment.replace(regex, "NUMBER");
+
+    document.getElementById("found").innerText = "Number found: " + numberFound;
+    document.getElementById("updated").innerText = "Updated comment: " + updatedComment;
+}
+</script>
+
+</body>
+</html>
+</body>
+</html>
