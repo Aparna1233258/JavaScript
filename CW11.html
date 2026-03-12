@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<h3>Open Console to See Output</h3>
+
+<script>
+class Book {
+  constructor(title, author, price) {
+    this.title = title;
+    this.author = author;
+    this.price = price;
+  }
+
+  getTitle() {
+    return this.title;
+  }
+
+  getAuthor() {
+    return this.author;
+  }
+
+  setPrice(newPrice) {
+    if (typeof newPrice === "number" && newPrice > 0) {
+      this.price = newPrice;
+      console.log("Price updated to:", newPrice);
+    } else {
+      console.log("Invalid price. Price must be a number greater than 0.");
+    }
+  }
+}
+
+let book1 = new Book("JavaScript Basics", "John Smith", 20);
+
+book1.setPrice(30);
+
+book1.setPrice(-5);
+
+console.log("Title:", book1.getTitle());
+console.log("Author:", book1.getAuthor());
+console.log("Final Price:", book1.price);
+</script>
+
+</body>
+</html>
+</body>
+</html>
